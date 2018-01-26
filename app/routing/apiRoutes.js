@@ -1,6 +1,12 @@
-var friends = require('../data/friends')
-
 module.exports = function (app) {
+
+    var friends = require('../data/friends')
+
+    console.log("friends required..");
+    console.log(JSON.stringify(friends,false, 2));
+    console.log(JSON.stringify(friends.maleArr));
+    console.log("\n\n")
+    console.log(JSON.stringify(friends.femaleArr));
 
     app.get('/api/male/:name?', function (req, res) {
     var chosen = req.params.name
@@ -13,6 +19,7 @@ module.exports = function (app) {
         }
         return res.json(false)
     }
+    console.log(friends.maleArr);
     return res.json(friends.maleArr)
     })
 
@@ -27,6 +34,7 @@ module.exports = function (app) {
         }
         return res.json(false)
     }
+    console.log(friends.femaleArr);
     return res.json(friends.femaleArr)
     })
 

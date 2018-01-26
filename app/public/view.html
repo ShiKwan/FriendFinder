@@ -7,7 +7,8 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -37,10 +38,16 @@
             <div class="panel-heading">
                 <h1>Male</h1>
             </div>
+            <div class="panel-body">
+
+            </div>
         </div>
         <div class="panel female-panel">
             <div class="panel-heading">
                 <h1>Female</h1>
+            </div>
+            <div class="panel-body">
+
             </div>
         </div>
         <footer class="footer">
@@ -54,6 +61,36 @@
         </footer>
 
     </div>
+    <script type="text/javascript">
+        $.get("/api/male", function (data) {
+            console.log(data);
+            createProfile(data, ".male-panel")
+        });
+
+        $.get("/api/female", function(data){
+            console.log(data);
+            createProfile(data, ".female-panel")
+        });
+
+        function createProfile(individualInfo, container) {
+                if (individualInfo) {
+                    $(container).show();
+                    for (var i = 0; i < individualInfo.length; i++) {
+                        var div = $("<div>");
+                        var img = $("<img height='100px' width='auto'>");
+                        var span = $("<span>");
+                        img.attr("src", individualInfo[i].pic);
+                        img.addClass("thumbnail");
+                        span.html(individualInfo[i].name);
+                        div.append(img).append(span);
+                        $(container + " .panel-body").append(div);
+                    }
+
+                } else {
+                    $(container).hide();
+                }
+            }
+    </script>
 
 
 </body>

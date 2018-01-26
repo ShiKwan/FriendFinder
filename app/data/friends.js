@@ -2,7 +2,9 @@ var maleArr = [
   {
     name: 'Chuck Norris',
     shownName: 'chucknorris',
-    pic: 'https://drive.google.com/open?id=14FHs6urmE4tKkPLQsRME41DA20QTB36-',
+    pic: 'https://drive.google.com/uc?id=14FHs6urmE4tKkPLQsRME41DA20QTB36-',
+    sex: 'male',
+    lookingFor: 'female',
     q1: '1',
     q2: '1',
     q3: '2',
@@ -17,7 +19,9 @@ var maleArr = [
   {
     name: 'Mike Tyson',
     shownName: 'miketyson',
-    pic: 'https://drive.google.com/open?id=1SiHivjYMahbxwHBa7gliKdXuI_AqJbCe',
+    pic: 'https://drive.google.com/uc?id=1SiHivjYMahbxwHBa7gliKdXuI_AqJbCe',
+    sex: 'male',
+    lookingFor: 'female',
     q1: '1',
     q2: '1',
     q3: '1',
@@ -32,7 +36,9 @@ var maleArr = [
   {
     name: 'Samuel Doolin',
     shownName: 'samueldoolin',
-    pic: 'https://drive.google.com/open?id=1xLy5xbKVKAX0OmkIQ3LUWz1cEfgdAVkZ',
+    pic: 'https://drive.google.com/uc?id=1xLy5xbKVKAX0OmkIQ3LUWz1cEfgdAVkZ',
+    sex: 'male',
+    lookingFor: 'female',
     q1: '2',
     q2: '2',
     q3: '2',
@@ -47,7 +53,9 @@ var maleArr = [
   {
     name: 'Jonathan Goldsmith',
     shownName: 'jonathangoldsmith',
-    pic: 'https://drive.google.com/open?id=1g7PmgvuC8wTicPO0N_K7QZgK2yHW9-67',
+    pic: 'https://drive.google.com/uc?id=1g7PmgvuC8wTicPO0N_K7QZgK2yHW9-67',
+    sex: 'male',
+    lookingFor: 'female',
     q1: '3',
     q2: '3',
     q3: '3',
@@ -62,7 +70,9 @@ var maleArr = [
   {
     name: 'Tyron Biggums',
     shownName: 'tyronbiggums',
-    pic: 'https://drive.google.com/open?id=1puBtG7Ssrb2rr4wpk1PyyMUsa9WQ_klg',
+    pic: 'https://drive.google.com/uc?id=1puBtG7Ssrb2rr4wpk1PyyMUsa9WQ_klg',
+    sex: 'male',
+    lookingFor: 'female',
     q1: '4',
     q2: '4',
     q3: '4',
@@ -77,7 +87,9 @@ var maleArr = [
   {
     name: 'Leeroy Jenkins',
     shownName: 'leeroyjenkins',
-    pic: 'https://drive.google.com/open?id=1I3DZ_qKXwOvpdQI7e2v_Xk7cDL-uKwYL',
+    pic: 'https://drive.google.com/uc?id=1I3DZ_qKXwOvpdQI7e2v_Xk7cDL-uKwYL',
+    sex: 'male',
+    lookingFor: 'female',
     q1: '5',
     q2: '5',
     q3: '5',
@@ -93,7 +105,9 @@ var femaleArr = [
   {
     name: 'McKayla Maroney',
     shownName: 'mckaylamaroney',
-    pic: 'https://drive.google.com/open?id=1NxVPrU3CuN9VMhKrC4lmBL7oeRE7u_wf',
+    pic: 'https://drive.google.com/uc?id=1NxVPrU3CuN9VMhKrC4lmBL7oeRE7u_wf',
+    sex: 'female',
+    lookingFor: 'male',
     q1: '1',
     q2: '1',
     q3: '2',
@@ -108,7 +122,9 @@ var femaleArr = [
   {
     name: 'Maryln Patchell',
     shownName: 'marylnpatchell',
-    pic: 'https://drive.google.com/open?id=1lMJF7D2k-Y0v4gYkc71ZZy5jvFOvrPhK',
+    pic: 'https://drive.google.com/uc?id=1lMJF7D2k-Y0v4gYkc71ZZy5jvFOvrPhK',
+    sex: 'female',
+    lookingFor: 'male',
     q1: '1',
     q2: '1',
     q3: '1',
@@ -123,7 +139,9 @@ var femaleArr = [
   {
     name: 'Lenna Haswell',
     shownName: 'lennahaswell',
-    pic: 'https://drive.google.com/open?id=1mGmHmtlZOHy7OTMpPJDIiBZGBC9RMigk',
+    pic: 'https://drive.google.com/uc?id=1mGmHmtlZOHy7OTMpPJDIiBZGBC9RMigk',
+    sex: 'female',
+    lookingFor: 'male',
     q1: '2',
     q2: '2',
     q3: '2',
@@ -138,7 +156,9 @@ var femaleArr = [
   {
     name: 'Rebecca Black',
     shownName: 'rebeccablack',
-    pic: 'https://drive.google.com/open?id=1vyASqzJyidByReIgNEM-cFQongEIR9NH',
+    pic: 'https://drive.google.com/uc?id=1vyASqzJyidByReIgNEM-cFQongEIR9NH',
+    sex: 'female',
+    lookingFor: 'male',
     q1: '3',
     q2: '3',
     q3: '3',
@@ -153,7 +173,9 @@ var femaleArr = [
   {
     name: 'Lea Charbonneau',
     shownName: 'leacharbonneau',
-    pic: 'https://drive.google.com/open?id=1-53-yA3zXex5nRB4acuQ-xkL7E6dpuvw',
+    pic: 'https://drive.google.com/uc?id=1-53-yA3zXex5nRB4acuQ-xkL7E6dpuvw',
+    sex: 'female',
+    lookingFor: 'male',
     q1: '4',
     q2: '4',
     q3: '4',
@@ -169,7 +191,9 @@ var femaleArr = [
   {
     name: 'Shena Neifert',
     shownName: 'shenaneifert',
-    pic: 'https://drive.google.com/open?id=1bwmWOiYaUZV5bIfqrbs9PYMdY2MIJtKi',
+    pic: 'https://drive.google.com/uc?id=1bwmWOiYaUZV5bIfqrbs9PYMdY2MIJtKi',
+    sex: 'female',
+    lookingFor: 'male',
     q1: '5',
     q2: '5',
     q3: '5',
@@ -182,9 +206,8 @@ var femaleArr = [
     q10: '5'
   }]
 
-module.exports = [
+module.exports = 
     {
         maleArr: maleArr,
-        maleArr: femaleArr
+        femaleArr: femaleArr
     }
-]
