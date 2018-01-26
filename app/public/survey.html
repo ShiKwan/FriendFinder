@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tables Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <span class="glyphicon glyphicon-fire"></span> Friend Finder</h1>
+            <hr>
+            <h2 class="text-center">Fill out the survey and leave the rest to us! We will find your best companion!</h2>
+            <br>
+
+            <div class="text-center">
+                <a href="/view">
+                    <button type="button" class="btn btn-lg btn-primary">
+                        <span class="glyphicon glyphicon-list-alt"></span> View Friends</button>
+                </a>
+                <a href="/survey">
+                    <button type="button" class="btn btn-lg btn-danger">
+                        <span class="glyphicon glyphicon-credit-card"></span>Survey</button>
+                </a>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+        
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Survey</h4>
+                    </div>
+                    <div class="panel-body">
+        
+                        <form role="form">
+        
+                            <div class="form-group">
+                                <label for="txtUserName">Name</label>
+                                <input type="text" class="form-control" id="txtUserName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtUserPhoto">Photo</label>
+                                <input type="text" class="form-control" id="txtUserPhoto">
+                            </div>
+                            
+                            <div class="form-group">
+                                <h4>Question 1</h4>
+                                <label>Your mind is always buzzing with unexplored ideas and plans</label>
+                                <!-- Single button -->
+                                <br />
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 2</h4>
+                                <label>Generally speaking, you rely more on your experience than your imagination.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 3</h4>
+                                <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 4</h4>
+                                <label>You rarely do something just out of sheer curiosity.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 5</h4>
+                                <label>People can rarely upset you.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 6</h4>
+                                <label>It is often difficult for you to relate to other people’s feelings</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 7</h4>
+                                <label>In a discussion, truth should be more important than people’s sensitivities.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 8</h4>
+                                <label>You rarely get carried away by fantasies and ideas.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 9</h4>
+                                <label>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>Question 10</h4>
+                                <label>You feel more energetic after spending time with a group of people.</label>
+                                <br />
+                                <!-- Single button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                         Select an Option
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a data-value="1" class="" href="#">1 (Strongly Disagree) </a>
+                                        </li>
+                                        <li>
+                                            <a data-value="2" class="" href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="3" class="" href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="4" class="" href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a data-value="5" class="" href="#">5 (Strongly Agree)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>        
+                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                        </form>
+        
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/male">API Male Users</a> |
+                    <a href="/api/female">API Female Users</a> |
+                    <a href="https://github.com/ShiKwan/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
