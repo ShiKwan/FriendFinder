@@ -18,7 +18,7 @@
 <body>
 
     <div class="container">
-
+        <div id="msgCenter"></div>
         <div class="jumbotron">
             <h1 class="text-center">
                 <span class="glyphicon glyphicon-fire"></span> Friend Finder</h1>
@@ -50,17 +50,17 @@
                         <form role="form">
         
                             <div class="form-group">
-                                <label for="txtUserName">Name</label>
+                                <label id="lblUserName" for="txtUserName">Name</label>
                                 <input type="text" class="form-control" id="txtUserName">
                             </div>
 
                             <div class="form-group">
-                                <label for="txtUserPhoto">Photo</label>
+                                <label id="lblUserPhoto" for="txtUserPhoto">Photo</label>
                                 <input type="text" class="form-control" id="txtUserPhoto">
                             </div>
                             
                             <div class="form-group">
-                                <label>Sex</label>
+                                <label id="lblSex">Sex</label><br />
                                 <select class="ddl-survey sex">
                                     <option></option>
                                     <option value="male">male</option>
@@ -68,7 +68,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Looking for .. </label>
+                                <label id="lblLookingFor">Looking for .. </label><br />
                                 <select class="ddl-survey looking-for">
                                     <option></option>
                                     <option value="male">Male</option>
@@ -78,7 +78,7 @@
                             
                             <div class="form-group">
                                 <h4>Question 1</h4>
-                                <label>Your mind is always buzzing with unexplored ideas and plans</label>
+                                <label id="lblQ1">Your mind is always buzzing with unexplored ideas and plans</label>
                                 <!-- Single button -->
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q1">
@@ -103,7 +103,7 @@
 
                             <div class="form-group">
                                 <h4>Question 2</h4>
-                                <label>Generally speaking, you rely more on your experience than your imagination.</label>
+                                <label id="lblQ2">Generally speaking, you rely more on your experience than your imagination.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q2">
                                     <option></option>
@@ -127,7 +127,7 @@
 
                             <div class="form-group">
                                 <h4>Question 3</h4>
-                                <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                                <label id="lblQ3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q3">
                                     <option></option>
@@ -151,7 +151,7 @@
 
                             <div class="form-group">
                                 <h4>Question 4</h4>
-                                <label>You rarely do something just out of sheer curiosity.</label>
+                                <label id="lblQ4">You rarely do something just out of sheer curiosity.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q4">
                                     <option></option>
@@ -175,7 +175,7 @@
 
                             <div class="form-group">
                                 <h4>Question 5</h4>
-                                <label>People can rarely upset you.</label>
+                                <label id="lblQ5">People can rarely upset you.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q5">
                                     <option></option>
@@ -199,7 +199,7 @@
 
                             <div class="form-group">
                                 <h4>Question 6</h4>
-                                <label>It is often difficult for you to relate to other people’s feelings</label>
+                                <label id="lblQ6">It is often difficult for you to relate to other people’s feelings</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q6">
                                     <option></option>
@@ -223,7 +223,7 @@
 
                             <div class="form-group">
                                 <h4>Question 7</h4>
-                                <label>In a discussion, truth should be more important than people’s sensitivities.</label>
+                                <label id="lblQ7">In a discussion, truth should be more important than people’s sensitivities.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q7">
                                     <option></option>
@@ -247,7 +247,7 @@
 
                             <div class="form-group">
                                 <h4>Question 8</h4>
-                                <label>You rarely get carried away by fantasies and ideas.</label>
+                                <label id="lblQ8">You rarely get carried away by fantasies and ideas.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q8">
                                     <option></option>
@@ -271,7 +271,7 @@
 
                             <div class="form-group">
                                 <h4>Question 9</h4>
-                                <label>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                                <label id="lblQ9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q9">
                                     <option></option>
@@ -295,7 +295,7 @@
 
                             <div class="form-group">
                                 <h4>Question 10</h4>
-                                <label>You feel more energetic after spending time with a group of people.</label>
+                                <label id="lblQ10">You feel more energetic after spending time with a group of people.</label>
                                 <br />
                                 <select data-placeholder="Select a value..." class="ddl-survey q10">
                                     <option></option>
@@ -316,7 +316,7 @@
                                     </option>
                                 </select>
                             </div>        
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                            <button type="submit"  class="btn btn-primary submit">Submit</button>
                         </form>
         
                     </div>
@@ -337,10 +337,138 @@
     </div>
 
     <script type="text/javascript">
+
+        var maleArr = [], femaleArr= [];
+        $.get("/api/male", function (data) {
+            if(data){
+                for(var i =0; i< data.length; i++){
+                    maleArr.push(data[i]);
+                }
+            }
+        });
+        $.get("/api/female", function (data) {
+            if(data){
+                for (var i = 0; i < data.length; i++) {
+                    femaleArr.push(data[i]);
+                }
+            }
+        });
+        
+        console.log("male..");
+        console.log(maleArr);
+        console.log("female..");
+        console.log(femaleArr);
+        
         $(".ddl-survey").chosen({width: "95%"});
+        function setErrorMsg(msgCenter){
+            msgCenter.addClass("alert");
+            msgCenter.html("Please fill out the highlighted area")
+        }
+        function validateTextbox(lbl, txt, msgCenter){
+            if(!txt){
+                lbl.addClass("danger");
+                setErrorMsg(msgCenter);
+                return false;
+            }else{
+                return true;
+            }
+
+        }
+        function validateDDL(lbl, ddl, msgCenter){
+            if (!ddl.chosen().val()) {
+                lbl.addClass("danger");
+                setErrorMsg(msgCenter);
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        function validateSurvey(msgCenter){
+            var validated = true;
+            msgCenter.removeClass("alert")
+            if(validated){
+                console.log("validating username...")
+                validated = validateTextbox(".lblUserName", ".txtUserName", msgCenter)
+                console.log("finished, and validate is.. " + validated)
+            }else{
+                return validated
+            }
+            if(validated){
+               validated = validateTextbox(".lblUserPhoto", ".txtUserPhoto", msgCenter)
+               console.log("finished validating photo, and validate is.. " + validated)
+            } else {
+                return validated
+            }
+            if(validated){
+                validated = validateDDL(".lblQ1", ".q1", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ2", ".q2", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ3", ".q3", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ4", ".q4", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ5", ".q5", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ6", ".q6", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ7", ".q7", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ8", ".q8", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ9", ".q9", msgCenter)
+            } else {
+                return validated
+            }
+            if (validated) {
+                validated = validateDDL(".lblQ10", ".q10", msgCenter)
+            } else {
+                return validated
+            }
+            
+        }
         
         $(".submit").click(function () {
+            return false;
             event.preventDefault();
+            var validated = true;
+            //validateSurvey("#msgCenter");
+            console.log(validated);
+
+            validated = validateTextbox("lblUserName", "txtUserName", "#msgCenter");
+            console.log()
+
+            $("#msgCenter").hide();
+            if(!validated){
+                $("#msgCenter").show();
+                break;
+            }
+            
             var newSurvey = {
                 name: $("#txtUserName").val().trim(),
                 shownName : $("#txtUserName").val().trim().replace(/\s+/g, "").toLowerCase(),
@@ -373,6 +501,40 @@
                     alert("added users to female section, and we are looking for your best companion...");
                 })
             }
+            var closestFriend;
+            var diff = 100;
+
+            function findDifference(lib, current){
+                for (var i = 0; i < lib.length; i++) {
+                    var currentDiff = 0;
+                    currentDiff = Math.abs(parseInt(lib[i].q1) - parseInt(current.q1));
+                    currentDiff += Math.abs(parseInt(lib[i].q2) - parseInt(current.q2));
+                    currentDiff += Math.abs(parseInt(lib[i].q3) - parseInt(current.q3));
+                    currentDiff += Math.abs(parseInt(lib[i].q4) - parseInt(current.q4));
+                    currentDiff += Math.abs(parseInt(lib[i].q5) - parseInt(current.q5));
+                    currentDiff += Math.abs(parseInt(lib[i].q6) - parseInt(current.q6));
+                    currentDiff += Math.abs(parseInt(lib[i].q7) - parseInt(current.q7));
+                    currentDiff += Math.abs(parseInt(lib[i].q8) - parseInt(current.q8));
+                    currentDiff += Math.abs(parseInt(lib[i].q9) - parseInt(current.q9));
+                    currentDiff += Math.abs(parseInt(lib[i].q10) - parseInt(current.q10));
+                    if (currentDiff <= diff) {
+                        console.log("current item is " + currentDiff + ", and previous item is " + diff)
+                        console.log("this guy is better than the one before")
+                        diff = currentDiff;
+                        closestFriend = lib[i];
+                    } else {
+                        console.log("this guy is no good, next~");
+                    }
+                }
+            }
+            if(newSurvey.lookingFor === "male"){
+                findDifference(maleArr, newSurvey);
+                
+            }else{
+                findDifference(femaleArr, newSurvey);
+            }
+            console.log("Found your match!");
+            console.log(closestFriend);
         })
     </script>
 

@@ -73,23 +73,40 @@
         });
 
         function createProfile(individualInfo, container) {
-                if (individualInfo) {
-                    $(container).show();
-                    for (var i = 0; i < individualInfo.length; i++) {
-                        var div = $("<div>");
-                        var img = $("<img height='100px' width='auto'>");
-                        var span = $("<span>");
-                        img.attr("src", individualInfo[i].pic);
-                        img.addClass("thumbnail");
-                        span.html(individualInfo[i].name);
-                        div.append(img).append(span);
-                        $(container + " .panel-body").append(div);
-                    }
+            if (individualInfo) {
+                $(container).show();
+                for (var i = 0; i < individualInfo.length; i++) {
 
-                } else {
-                    $(container).hide();
+                    var div = $("<div>");
+                    div.addClass("panel").addClass("panel-default")
+                    var divBody = $("<div>");
+                    divBody.addClass("panel-body")
+                    var row = $("<div>");
+                    row.addClass("row");
+                    var left = $("<div>");
+                    var right = $("<div>");
+                    left.addClass("col-md-4");
+                    right.addClass("col-md-8");
+                    var thumbHolder = $("<a>");
+                    thumbHolder.addClass("thumbnail");
+                    var img = $("<img>");
+                    var name = $("<h2>");
+                    img.attr("src", individualInfo[i].pic);
+                    img.addClass("thumbnail");
+                    name.html(individualInfo[i].name);
+
+                    left.append(thumbHolder.append(img))
+                    right.append(name);
+                    row.append(left).append(right);
+                    divBody.append(row);
+                    div.append(divBody);
+                    $(container).append(div);
                 }
+
+            } else {
+                $(container).hide();
             }
+        }
     </script>
 
 
