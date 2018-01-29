@@ -5,6 +5,8 @@ var maleArr = [
     pic: 'https://drive.google.com/uc?id=14FHs6urmE4tKkPLQsRME41DA20QTB36-',
     sex: 'male',
     lookingFor: 'female',
+    email: 'chuck@norris@ff.com',
+    profile: 'I am the navigator you are looking for. Hello ladies! I am learning about important dates in history. Wanna be one of them? I am a popular kind of chap, who likes nothing more than stamp collecting with the right woman. The first thing people usually notice about me is my patient personality, closly followed by my smashing spots.I am the man for you, if you like a great spots and fingers, particularly combined with ample baby oil.I work as a navigator, helping sick children.This allows me to exercise my skills: kindness and resourcefulness. My life goals include: Star in the next Star Wars film. Fall in love with you. Become the best navigator. I can be Help all the sick children in the world. If you are the right woman for me, you will be courageous and special.You would not be afraid to be open and honest and will have a healthy respect for perfection.My ideal date would involve writing in Devon with a beautiful woman by my side.While we are there, I admire your sloppy spots whilst feeling I am the luckiest man on the planet. Let me tell you about a funny thing that happened to me last week.I was just helping an elderly across the road when I was hit by a car.I needed three stitches.BOOM! May the force be with you.',
     q1: '1',
     q2: '1',
     q3: '2',
@@ -22,6 +24,8 @@ var maleArr = [
     pic: 'https://drive.google.com/uc?id=1SiHivjYMahbxwHBa7gliKdXuI_AqJbCe',
     sex: 'male',
     lookingFor: 'female',
+    email: 'mike@tyson@ff.com',
+    profile: 'Natural redhead, unnaturally good at limbo contests, hates seafood but loves goldfish crackers',
     q1: '1',
     q2: '1',
     q3: '1',
@@ -39,6 +43,8 @@ var maleArr = [
     pic: 'https://drive.google.com/uc?id=1xLy5xbKVKAX0OmkIQ3LUWz1cEfgdAVkZ',
     sex: 'male',
     lookingFor: 'female',
+    email: 'samuel@doolin@ff.com',
+    profile: ' I know every word of the ten-season run of Friends by heart, and my next goal in life is to watch them en Español until I know Spanish.',
     q1: '2',
     q2: '2',
     q3: '2',
@@ -56,6 +62,8 @@ var maleArr = [
     pic: 'https://drive.google.com/uc?id=1g7PmgvuC8wTicPO0N_K7QZgK2yHW9-67',
     sex: 'male',
     lookingFor: 'female',
+    email: 'jonathan@goldsmith@ff.com',
+    profile: 'My #1 vacation destination is the Minnesota State Fair, and I don’t understand why it doesn’t make more appearances on Insider.',
     q1: '3',
     q2: '3',
     q3: '3',
@@ -73,6 +81,8 @@ var maleArr = [
     pic: 'https://drive.google.com/uc?id=1puBtG7Ssrb2rr4wpk1PyyMUsa9WQ_klg',
     sex: 'male',
     lookingFor: 'female',
+    email: 'tyron@biggums@ff.com',
+    profile: 'All I want is someone who can sing the Elephant Love Medley Duet from Moulin Rouge with me. My sister could do it, but she always makes me be the boy.',
     q1: '4',
     q2: '4',
     q3: '4',
@@ -90,6 +100,8 @@ var maleArr = [
     pic: 'https://drive.google.com/uc?id=1I3DZ_qKXwOvpdQI7e2v_Xk7cDL-uKwYL',
     sex: 'male',
     lookingFor: 'female',
+    email: 'leeroy@jenkins@ff.com',
+    profile: 'What’s your favorite Jonas Brothers song and why? Mine is Good Night and Goodbye, and in the following dissertation I will explain in detail why they were the best boy band of all time. (cont.)',
     q1: '5',
     q2: '5',
     q3: '5',
@@ -108,6 +120,8 @@ var femaleArr = [
     pic: 'https://drive.google.com/uc?id=1NxVPrU3CuN9VMhKrC4lmBL7oeRE7u_wf',
     sex: 'female',
     lookingFor: 'male',
+    email: 'mckayla@maroney@ff.com',
+    profile: 'Look I’m not good at a lot of things, but I can do my make up to look exactly like Blanche Devereaux from Golden Girls, so we should go clubbing.',
     q1: '1',
     q2: '1',
     q3: '2',
@@ -125,6 +139,8 @@ var femaleArr = [
     pic: 'https://drive.google.com/uc?id=1lMJF7D2k-Y0v4gYkc71ZZy5jvFOvrPhK',
     sex: 'female',
     lookingFor: 'male',
+    email: 'maryln@patchell@ff.com',
+    profile: 'Oh to dance beneath the diamond sky with one hand waving free, silhouetted by the sea, circled by the circus sands, with all memory and fate driven deep beneath the waves; let me forget about today until tomorrow…',
     q1: '1',
     q2: '1',
     q3: '1',
@@ -142,6 +158,8 @@ var femaleArr = [
     pic: 'https://drive.google.com/uc?id=1mGmHmtlZOHy7OTMpPJDIiBZGBC9RMigk',
     sex: 'female',
     lookingFor: 'male',
+    email: 'lenna@haswell@ff.com',
+    profile: 'Share the results of your latest Buzzfeed quiz—In case you were wondering, based on my favorite kind of bread, Ryan Gosling is my husband.',
     q1: '2',
     q2: '2',
     q3: '2',
@@ -159,6 +177,8 @@ var femaleArr = [
     pic: 'https://drive.google.com/uc?id=1vyASqzJyidByReIgNEM-cFQongEIR9NH',
     sex: 'female',
     lookingFor: 'male',
+    email: 'rebecca@black@ff.com',
+    profile: 'A/S/L? …No I don’t want to know yours, I want you to guess mine.',
     q1: '3',
     q2: '3',
     q3: '3',
@@ -176,6 +196,8 @@ var femaleArr = [
     pic: 'https://drive.google.com/uc?id=1-53-yA3zXex5nRB4acuQ-xkL7E6dpuvw',
     sex: 'female',
     lookingFor: 'male',
+    email: 'lea@charbonneau@ff.com',
+    profile: 'Link to your list of Twitter faves—They’ll get a good sense of what makes you laugh, your political stance, or whatever it is you choose to focus on on a regular basis.',
     q1: '4',
     q2: '4',
     q3: '4',
@@ -194,6 +216,8 @@ var femaleArr = [
     pic: 'https://drive.google.com/uc?id=1bwmWOiYaUZV5bIfqrbs9PYMdY2MIJtKi',
     sex: 'female',
     lookingFor: 'male',
+    email: 'shena@neifert@ff.com',
+    profile: 'Share the latest Facebook-generated word cloud you made—the center of my last one was my mom’s name, which I know isn’t that appealing, but it’s a conversation starter to say the least.',
     q1: '5',
     q2: '5',
     q3: '5',
@@ -206,8 +230,8 @@ var femaleArr = [
     q10: '5'
   }]
 
-module.exports = 
-    {
-        maleArr: maleArr,
-        femaleArr: femaleArr
-    }
+module.exports =
+  {
+    maleArr: maleArr,
+    femaleArr: femaleArr
+}

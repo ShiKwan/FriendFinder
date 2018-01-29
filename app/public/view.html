@@ -91,12 +91,23 @@
                     thumbHolder.addClass("thumbnail");
                     var img = $("<img>");
                     var name = $("<h2>");
+                    var profile = $("<span>");
+                    var button = $("<button class='btn btn-lg btn-primary' style='float: right; margin-top: 50px'>");
+                    var glyHolder = $("<span>");
+                    var hypEmail = $("<a>");
+                    hypEmail.attr("href", "mailto:"+individualInfo[i].email);
+                    glyHolder.addClass("glyphicon").addClass("glyphicon-envelope");
+                    //button.append(glyHolder);
+                    button
+                    button.html(" Contact me").prepend(glyHolder);
+                    hypEmail.append(button);
                     img.attr("src", individualInfo[i].pic);
                     img.addClass("thumbnail");
                     name.html(individualInfo[i].name);
+                    profile.html(individualInfo[i].profile);
 
                     left.append(thumbHolder.append(img))
-                    right.append(name);
+                    right.append(name).append(profile).append(hypEmail);
                     row.append(left).append(right);
                     divBody.append(row);
                     div.append(divBody);
