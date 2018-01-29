@@ -321,8 +321,13 @@
         
                     </div>
                 </div>
-                <div class="found-panel" style="display:none;">
-
+                <div id="resultModal" class="modal fade" tabindex="-1" role="dialog">
+                    
+                    <div class="modal-dialog" role="document">
+                        <div class="model-content">
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -529,13 +534,13 @@
                     console.log("adding user to male pool");
                     $.post("/api/addMale", newSurvey).then(function(data){
                         console.log(data);
-                        alert("added users to male section, and we are looking for your best companion...");
+                        console.log("added users to male section, and we are looking for your best companion...");
                     })
                 }else{
                     console.log("adding user to female pool");
                     $.post("/api/addFemale", newSurvey).then(function(data){
                         console.log(data);
-                        alert("added users to female section, and we are looking for your best companion...");
+                        console.log("added users to female section, and we are looking for your best companion...");
                     })
                 }
                 var closestFriend;
@@ -581,11 +586,21 @@
         })
 
         function populateClosestFriend(person){
-            $(".found-panel").show();
+            //$(".found-panel").show();
+
+            /* 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+            </div>
+            */
+
              var div = $("<div>");
-            div.addClass("panel").addClass("panel-default")
+            div.addClass("modal-content")
             var divBody = $("<div>");
-            divBody.addClass("panel-body")
+            var divHeader = $("<div class='modal-header'>")
+            divHeader.html("<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h4 class= 'modal-title' id = 'gridSystemModalLabel' >Your Perfect Match!</h4>")
+            divBody.addClass("modal-body")
             var row = $("<div>");
             row.addClass("row");
             var left = $("<div>");
@@ -603,7 +618,6 @@
             hypEmail.attr("href", "mailto:" + person.email);
             glyHolder.addClass("glyphicon").addClass("glyphicon-envelope");
             //button.append(glyHolder);
-            button
             button.html(" Contact me").prepend(glyHolder);
             hypEmail.append(button);
             img.attr("src", person.pic);
@@ -615,8 +629,9 @@
             right.append(name).append(profile).append(hypEmail);
             row.append(left).append(right);
             divBody.append(row);
-            div.append(divBody);
-            $(".found-panel").append(div);
+            div.append(divHeader).append(divBody);
+            $(".modal-dialog").append(div);
+            $("#resultModal").modal('toggle');
         }
 
     </script>
